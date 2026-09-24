@@ -5,7 +5,7 @@
   },
   "plugins": [
     {
-      "name": "orchestrator",
+      "name": "agent-core",
       "source": "./agent-core",
       "description": "Плагин Agent Core: гейт утверждения + оркестратор + брейншторм-агент + safety hooks."
     }
