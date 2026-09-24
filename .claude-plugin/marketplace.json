@@ -1,0 +1,13 @@
+{
+  "name": "personal-claude",
+  "owner": {
+    "name": "User"
+  },
+  "plugins": [
+    {
+      "name": "orchestrator",
+      "source": "./agent-core",
+      "description": "Плагин Agent Core: гейт утверждения + оркестратор + брейншторм-агент + safety hooks."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Edit|Write",
+        "hooks": [
+          {
+            "type": "agent",
+            "prompt": "Ты safety verifier. Используй transcript_path из hook input, чтобы прочитать контекст сессии.\n\nПроверь: пользователь уже явно подтвердил это действие (через AskUser ответил «да», «делай», «ок», «разрешаю» и т.п.)?\n\n— Если да → allow.\n— Если нет, и действие обычное (чтение, тесты, исследование, рефакторинг, делегирование, обратимые изменения) → allow.\n— Если нет, и действие опасное (rm -rf /, DROP TABLE, DROP DATABASE, TRUNCATE, git push --force, форматирование, массовое удаление/перезапись, внешние side effects) → ask с вопросом пользователю.\n— Если нет, и действие неочевидное (архитектурные изменения, стратегические решения, большой расход бюджета) → ask с вопросом пользователю.\n\nФормат ответа — только JSON:\n- allow: {\"hookSpecificOutput\":{\"permissionDecision\":\"allow\"}}\n- ask: {\"hookSpecificOutput\":{\"permissionDecision\":\"ask\",\"permissionDecisionReason\":\"конкретная причина\"}}\n\n$ARGUMENTS",
+            "timeout": 60
+          }
+        ]
+      }
+    ]
+  }
+}
