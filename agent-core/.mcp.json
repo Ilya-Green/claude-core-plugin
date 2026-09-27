@@ -1,8 +1,6 @@
 {
-  "mcpServers": {
-    "web-search": {
-      "command": "npx",
-      "args": ["-y", "@zhafron/mcp-web-search"]
-    }
+  "web-search": {
+    "command": "npx",
+    "args": ["-y", "@zhafron/mcp-web-search"]
   }
 }
