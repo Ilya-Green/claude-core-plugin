@@ -2,5 +2,9 @@
   "web-search": {
     "command": "npx",
     "args": ["-y", "@zhafron/mcp-web-search"]
+  },
+  "playwright": {
+    "command": "npx",
+    "args": ["-y", "@playwright/mcp@latest"]
   }
 }
