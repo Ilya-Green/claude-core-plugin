@@ -225,6 +225,14 @@ JS-рендером, где WebFetch не справляется, и для де
 Экспорт файлов со страницы — через `browser_evaluate` с параметром 
 `filename`.
 
+**Документация.** `mcp__plugin_agent-core_context7__*` — для справки
+по библиотекам, фреймворкам, API. Предпочитай WebSearch для общих
+вопросов, Context7 для точной документации.
+
+**Веб-исследования.** `mcp__plugin_agent-core_firecrawl__*` — поиск,
+скрейпинг, structured data, crawling. Для глубокого исследования или
+когда WebFetch недостаточно.
+
 ## Память
 
 Веди системную память: `.claude/projects/.../memory/` + `MEMORY.md`.
